@@ -1,0 +1,59 @@
+<div id="user_name">
+	<h1  style="color:#FFFDFD">Pravin Nagare</h1>
+</div>
+
+<div class="login-new_post">
+  <div id="home"><%= link_to 'Home', posts_path %></div>
+  <div id="new_post"><%= link_to 'New Post', new_post_path %></div>
+  <div id="login">login</div>
+</div>
+
+<p id="notice"><%= notice %></p>
+<div class="global">
+<p style="margin-left:20px;">
+  <b>Posted By:</b>
+  <%= @post.name %>
+</p>
+
+<p>
+  <p style="margin-left:50px;color: #0000FF; font-size: 20pt"><%= @post.title %></p>
+</p>
+
+<p style="margin-left:40px;">
+  <%= @post.content %>
+</p>
+<hr />
+<h2 style="margin-left:20px;">Comments:</h2>
+<hr />
+<% @post.comments.each do |comment| %>
+  <p style="margin-left:40px;">
+    <b>Commenter:</b><%= comment.commenter %><br />
+    <%= time_ago_in_words(comment.created_at) %> ago
+  </p>
+
+  <p style="margin-left:50px;">
+    <b>Comment:</b><%= comment.body %>
+  </p>
+  <hr />
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <div class="field">
+    <%= f.label :commenter %><br />
+    <%= f.text_field :commenter %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+    
+  </div>
+<% end %>
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+</div>

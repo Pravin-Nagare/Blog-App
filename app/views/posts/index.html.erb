@@ -1,0 +1,40 @@
+<div class="login-new_post" >
+  <div id="new_post"><%= link_to 'New Post', new_post_path %></div>
+  <div id="login">login</div>
+  <div id="home"><a href="">Home</a></div>
+</div>
+
+<div id="user_name">
+	<h1  style="color:#FFFDFD">Pravin Nagare</h1>
+</div>
+<div class="global">
+<table>
+<% for post in @posts.reverse %>
+  <tr>
+    <td><p style="margin-left:50px;color: #0000FF; font-size: 20pt"><%= post.title %></p></td>
+  <tr>
+    <td><p style="margin-left:15px; font-size: 10pt"><%= post.content %></p></td>
+  </tr>
+  <tr>
+    <td><p style="margin-left:10px;color: #023CF5; font-size: 10pt"><%= link_to 'Add Comments', post %>
+    <%= link_to 'Edit', edit_post_path(post) %>
+    <%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></p></td>
+  </tr>
+  <tr><td><p style="margin-left:10px;color: #0000FF; font-size: 10pt"><%= time_ago_in_words(post.created_at) %> ago</p></tr></td>
+  <tr><td><hr /></td></tr>
+<% end %>
+</table>
+</div>
+<div class="archive">
+
+<table>
+<tr>
+	<td><p style="color:#24F112; margin-left:0px; font-size: 15pt">Blog Archive</p></td>
+</tr>
+<% @posts.each do |post| %>
+<tr>
+    <td><p style="color:#19E7E7; margin-left:0px;"> <%= link_to post.title, post %></p></td>
+</tr>
+   <% end %>
+</table>
+</div>

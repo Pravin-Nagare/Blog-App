@@ -1,0 +1,142 @@
+body {
+  background-image:url('wood.jpg');
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+  
+.global{
+	position: absolute;
+       margin-left: auto;
+       margin-right: auto;
+       left: 200px;
+       top : 120px;
+       width: 800px;
+     background:#EAEADE url(http://2.bp.blogspot.com/_V-IXTBBt1Bg/SWq8VNaxRHI/AAAAAAAAAow/xajjJjoxkmU/s1600/bg.jpg) repeat scroll top left;
+       border: 0px;} 
+
+.new-post{
+	position: absolute;
+       margin-left: auto;
+       margin-right: auto;
+       right: 300px;
+       top : 120px;
+       width: 600px;
+      background:#EAEADE url(http://2.bp.blogspot.com/_V-IXTBBt1Bg/SWq8VNaxRHI/AAAAAAAAAow/xajjJjoxkmU/s1600/bg.jpg) repeat scroll top left;
+       border: 0px;} 
+
+
+.archive{
+       position: absolute;
+       right: 100px;
+       top : 120px;
+       width: 150px;
+       border: 0px; } 
+ 
+       
+.login-new_post{
+       z-index: 1000;     
+       position: fixed;
+       background-color: #0FCE07;
+       right: 0px;
+       left: 0px;
+       top : 0px;
+       height : 30px;
+       border: 0px; } 
+       
+#new_post_heading{
+       position: absolute;
+       left: 100px;
+       top : 65px;
+}
+
+#back{
+      position: absolute;
+      left: 665px;
+      top: 520px;
+}
+
+#login{
+       position: absolute;
+       right: 40px;
+       top : 10px;}
+       
+#home{
+       position: absolute;
+       right: 150px;
+       top : 10px;}
+
+#new_post{
+       position: absolute;
+       right: 80px;
+       top : 10px;}
+       
+#back_new_post{
+	position: absolute;
+	left: 582px;
+	top: 529px;
+}
+
+
+#user_name{
+       position: absolute;
+       left: 100px;
+       top : 40px;
+       }
+
+hr{
+	margin-left:20px; 
+	width:80%; 
+  }       
+ p{
+     margin-left:400px;
+   }
+
+ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+pre {
+   font-size: 11px; }
+
+a {
+  color: #000;
+  &:visited {
+    color: #666; }
+  &:hover {
+    color: #fff;
+    background-color: #000; } }
+
+div {
+  &.field, &.actions {
+    margin-left: 100px;
+    margin-bottom: 10px; } }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff; }
+  ul li {
+    font-size: 12px;
+    list-style: square; } }

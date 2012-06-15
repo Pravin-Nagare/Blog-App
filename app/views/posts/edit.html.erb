@@ -1,0 +1,21 @@
+<div class="login-new_post" >
+  <div id="home"><%= link_to 'Home', posts_path %></div>
+  <div id="new_post"><%= link_to 'New Post', new_post_path %></div>
+  <div id="login">login</div>
+</div>
+
+<div id="user_name">
+	<h1  style="color:#FFFDFD">Pravin Nagare</h1>
+</div>
+
+
+<div id="new_post_heading">
+	<p style="color: #55AF18; font-size: 20pt;">Editing Post</p>
+</div>
+
+<%= render 'form' %>
+
+<div id="back">
+	<%= link_to 'Show', @post %> |
+	<%= link_to 'Back', posts_path %>
+</div>
